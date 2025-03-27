@@ -21,6 +21,7 @@ let counterUpJs = () => {
     counterJs();
   }, 100);
 };
+counterUpJs();
 // ========== counter up js ===========
 
 // ========== counter down js ===========
