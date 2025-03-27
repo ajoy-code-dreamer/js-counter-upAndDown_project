@@ -8,7 +8,6 @@ let error_text = document.querySelector(".error_text");
 let countStart = 0;
 let countEnd = 0;
 
-
 // ========== counter up js ===========
 let counterUpJs = () => {
   function counterJs() {
@@ -24,11 +23,7 @@ let counterUpJs = () => {
 };
 // ========== counter up js ===========
 
-
 // ========== counter down js ===========
-
-
-
 let counterDownJs = () => {
   function counterJs() {
     countStart--;
@@ -43,10 +38,11 @@ let counterDownJs = () => {
 };
 // ========== counter down js ===========
 
+// ========= counter button work ============
 counter_reset.addEventListener("click", () => {
   countStart = counting.innerHTML;
   if (countStart == 0) {
-    error_text.innerHTML = "Counter is already reset";
+    error_text.innerHTML = "The Counter is already reset";
   } else {
     countStart = 0;
     counting.innerHTML = countStart;
@@ -56,24 +52,25 @@ counter_reset.addEventListener("click", () => {
 
 counter_up.addEventListener("click", () => {
   countStart = counting.innerHTML;
-  if(countStart == 0){
+  if (countStart == 0) {
     counterUpJs();
-  counting.innerHTML = countStart;
-  error_text.innerHTML = "";
-  }else{
-    error_text.innerHTML = "counter is already started";
+    counting.innerHTML = countStart;
+    error_text.innerHTML = "";
+  } else {
+    error_text.innerHTML = "The Counter is already started";
   }
 });
 
 counter_down.addEventListener("click", () => {
   countStart = counting.innerHTML;
   if (countStart <= 0) {
-    error_text.innerHTML = "Counter can't be negative";
+    error_text.innerHTML = "The Counter can't be negative";
   } else {
     error_text.innerHTML = "";
     counterDownJs();
     counting.innerHTML = countStart;
   }
 });
+// ========= counter button work ============
 
 // ============ counter js ============
